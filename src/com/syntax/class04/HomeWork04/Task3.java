@@ -2,6 +2,7 @@ package com.syntax.class04.HomeWork04;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task3 {
@@ -22,7 +23,10 @@ fill in all the textboxes in the form (edited)
         driver.findElement(By.cssSelector("input[data-bv-field *='pho']")).sendKeys("3475003322");
         driver.findElement(By.cssSelector("input[data-bv-field *='addre']")).sendKeys("102 street");
         driver.findElement(By.cssSelector("input[name='city']")).sendKeys("Rego Park");
-        driver.findElement(By.cssSelector("select[name='state']")).sendKeys("NY");
+        WebElement state=driver.findElement(By.cssSelector("select[name='state']"));
+        state.sendKeys("New York");
+        Thread.sleep(1000);
+        state.click();
         driver.findElement(By.cssSelector("input[placeholder *='Zip']")).sendKeys("11374");
         Thread.sleep(2000);
         driver.findElement(By.cssSelector("input[placeholder *='Web']")).sendKeys("alexwhite.com");
