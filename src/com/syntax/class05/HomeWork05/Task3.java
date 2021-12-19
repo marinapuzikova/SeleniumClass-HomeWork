@@ -17,8 +17,8 @@ Click signup
 
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         driver.get("https://fb.com");
+        driver.manage().window().maximize();
         Thread.sleep(1000);
         WebElement newAccount = driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']"));
         newAccount.click();

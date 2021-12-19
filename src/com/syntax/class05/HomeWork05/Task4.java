@@ -19,8 +19,8 @@ verify the title of page
 
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         driver.get("https://www.ebay.com/");
+        driver.manage().window().maximize();
         Thread.sleep(1000);
 
         List<WebElement> allCategories= driver.findElements(By.cssSelector("select#gh-cat"));

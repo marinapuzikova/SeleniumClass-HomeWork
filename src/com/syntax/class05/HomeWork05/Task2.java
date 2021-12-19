@@ -21,8 +21,8 @@ Verify error message with text “Password cannot be empty” is displayed.
 
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
+        driver.manage().window().maximize();
         WebElement userName= driver.findElement(By.cssSelector("input#txtUsername"));
         userName.sendKeys("admin");
         WebElement loginButton=driver.findElement(By.cssSelector("input#btnLogin"));

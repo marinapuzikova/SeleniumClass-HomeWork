@@ -20,9 +20,8 @@ Print to console only the links that has text
 
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-
         driver.get("https://www.amazon.com/");
+        driver.manage().window().maximize();
         List<WebElement> allLinks = driver.findElements(By.tagName("a"));
         System.out.println("The number of all links on amazon " + allLinks.size());
 
