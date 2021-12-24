@@ -12,7 +12,7 @@ import java.util.List;
 public class MultipleSelectDD {
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
 
@@ -61,7 +61,5 @@ public class MultipleSelectDD {
             System.out.println(it.next().getText());
 
         }
-
-
     }
 }

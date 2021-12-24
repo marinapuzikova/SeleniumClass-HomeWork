@@ -23,8 +23,9 @@ public class dropDown {
 
 //        use the select class to select from drop down
         Select select = new Select(days);
+
 //select the value from drop down using select by index
-//        select.selectByIndex(1);
+   //     select.selectByIndex(1);
 //
 //        Thread.sleep(2000);
 //
@@ -33,7 +34,6 @@ public class dropDown {
 //        Thread.sleep(2000);
 //
 //        select.selectByIndex(7);
-
 
 //        select by visible text
 //        select.selectByVisibleText("Thursday");

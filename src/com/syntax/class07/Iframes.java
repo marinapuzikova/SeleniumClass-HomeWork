@@ -18,7 +18,7 @@ public class Iframes {
         WebElement text1 = driver.findElement(By.cssSelector("h1#sampleHeading"));
         System.out.println("the text is   :" + text1.getText());
 
-//        as frame 2 doesnt lie inside frame 1 so inorder to get there we need to
+//        as frame 2 doesnt lie inside frame 1 so in order to get there we need to
 //        switch our focus to the deafult page
         driver.switchTo().defaultContent();
 

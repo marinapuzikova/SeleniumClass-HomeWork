@@ -1,4 +1,4 @@
-package com.syntax.class07.HomeWork;
+package com.syntax.class07.HomeWork07;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +28,9 @@ get all windows handles
         facebookBtn.click();
         Thread.sleep(2000);
 
+        Set<String> allWindowsHandles=driver.getWindowHandles();
+        System.out.println(allWindowsHandles.size());
+
         Iterator<String> it = driver.getWindowHandles().iterator();
         String mainWindowHandle = it.next();
         String instagramWindowHandle = it.next();
@@ -36,6 +39,7 @@ get all windows handles
         System.out.println("Main window handle: " + mainWindowHandle);
         System.out.println("Instagram window handle: " + instagramWindowHandle);
         System.out.println("Facebook window handle: " + facebookWindowHandle);
+
 
 
     }

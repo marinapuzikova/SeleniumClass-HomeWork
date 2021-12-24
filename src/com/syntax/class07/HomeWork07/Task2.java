@@ -1,4 +1,4 @@
-package com.syntax.class07.HomeWork;
+package com.syntax.class07.HomeWork07;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
