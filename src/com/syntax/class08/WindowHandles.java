@@ -35,7 +35,7 @@ public class WindowHandles {
 
 // to switch to newtab and get the text
 //        1. get all handles           //will gett to us all WindowHandles on current session
-        Set<String> allHandles = driver.getWindowHandles();//We use Set cause it doesnt allow dublication
+        Set<String> allHandles = driver.getWindowHandles();//We use Set cause it doesnt allow dublication and its automatically convert Set to LinkedHashSet(by default)
 
 //        2.find the desired handle i.e of newtab by iterating through the set
         Iterator<String> it=allHandles.iterator();
