@@ -37,7 +37,7 @@ handle all alerts one by one
         confirmatioAlert.click();
         Alert confirmationAlert = driver.switchTo().alert();
         confirmationAlert.accept();//once we switch->we perform the action
-        Thread.sleep(2000);
+        Thread.sleep(4000);
 
 
 //       handling prompt alert
@@ -45,6 +45,7 @@ handle all alerts one by one
         promptAlertButton.click();
         Alert promptAlert = driver.switchTo().alert();
         promptAlert.sendKeys("Hello from the other side");
+        Thread.sleep(4000);
         promptAlert.accept();
 
 

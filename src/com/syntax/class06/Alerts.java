@@ -32,10 +32,11 @@ public class Alerts {
         System.out.println(confirmationAlert.getText());
 
 //        cancel the alert
+
         confirmationAlert.dismiss();
 
 
-        Thread.sleep(2000);
+        Thread.sleep(4000);
 //        prompt alert
 //        enable
         driver.findElement(By.cssSelector("button#prompt")).click();
@@ -46,7 +47,7 @@ public class Alerts {
 
         promptAlert.sendKeys("Hello we need to sleep");
 
-
+        Thread.sleep(4000);
         // accept
         promptAlert.accept();
 

@@ -1,0 +1,94 @@
+*********************Selenium Review 05 *****************
+
+TASK 1:
+1.goto http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/dashboard
+2. Enter user name and wrong password
+3.Hit the login Button
+4.take screen shot
+
+guide lines:
+create
+1.Base class--> Open and close browser method
+2.utils-->common methods
+it will have the methods to
+a. send keys
+b. take screen shot
+3.page --> all the needed elements of the login page
+" use with page factory to intialize all elements"
+HINT
+@Findby (id='txtusername')
+public WebElement username;
+don't forget to initialize by calling constructor:)
+
+
+
+--------------------------------
+1. baseclass --> open and close browser methods
+2.commonMethods--> commonly used methods
+3.pages -->locate all the elements that we need to use
+
+				we have two methods we can implement to locate the elements
+				1.the old one we already know driver.findElements(By.id());
+				2.using page factory annotations.
+
+				----pageFactory
+				1.@FindBy-->annotation
+				   @FindBy(id="txtusername")          ----->public Webelement userName=driver.Findelement(By.id("txtusername"))
+				   public webElement userName;        ----->
+
+				2.--->call the constructor to initalize all the elements
+				public  loginwithpagefactory(){
+
+					PageFactory.initElements(driver,this);
+				}
+4.test--> loginPageTest
+
+
+Task2--->>>>>
+got to syntax hrms
+login
+make sure that welcome admin is there on dashboard (print it in console)
+take screenshot
+
+
+1.
+
+
+task 3--> goto admin page and find a specific user
+1.create a new test --> adminpagetest
+1.1 the admin btn element is going to be inside the dashboard page class
+2.Adminpage--> all the element of admin page
+
+
+
+----------------Window Handles--------------
+**what is a window handle?
+a unique alphanumeric id
+
+** is there any difference in a window and a tab when we look from selenium persepective?
+No, selenium treats a new tab similar to a new window
+
+**If we open up 5 windows, is there any way of nowing that which one was opened before??
+No, we donto know which window was open before
+
+**can we possibly know that which window handle belongs to which particular window by index???
+No we  can not!!!!!!!
+
+*getwindowHandle ---> it returns us the id or handle of the current window on which the focus of selenium is
+
+*getwindowHandles-- >it returns us all the windows handles that are there!!!!
+
+*switchTo.defualtcontent()-->switch the focus to the main/ home page
+
+
+and to switch focus to any other page we use
+driver.switchTo.Windows(handle);
+
+
+
+*****to switch to one of the desried windows****
+1.get all the handles  -->returned to us in an unordered set
+2.We will iterate the whole set and move through each handle one by one
+3.switch to each handle and check if it is the desired one ----> "in an if condition check for the title or the url"
+  yes--> break out
+  no--> conitnue to loop through and check

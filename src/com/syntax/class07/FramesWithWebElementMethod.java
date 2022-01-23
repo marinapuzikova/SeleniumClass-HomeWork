@@ -19,7 +19,7 @@ public class FramesWithWebElementMethod {
 //            switch to default
         driver.switchTo().defaultContent();
 //            switch to the frame using index
-        driver.switchTo().frame(1);
+        driver.switchTo().frame(3);
         System.out.println(driver.findElement(By.cssSelector("h1#sampleHeading")).getText());
 
     }

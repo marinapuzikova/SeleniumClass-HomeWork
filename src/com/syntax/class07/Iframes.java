@@ -13,7 +13,9 @@ public class Iframes {
         driver.get("https://demoqa.com/frames");
         driver.manage().window().maximize();
         //      Switch to the desired frame as our desired webElement is inside that frame
-        driver.switchTo().frame("frame1");
+        //driver.switchTo().frame("frame1");
+        driver.switchTo().frame(3);
+
         //        getting the webElement
         WebElement text1 = driver.findElement(By.cssSelector("h1#sampleHeading"));
         System.out.println("the text is   :" + text1.getText());

@@ -27,8 +27,9 @@ public class MultipleSelectDD {
         Select select = new Select(statesDD);
 
 //        check if the drop down is multiple
-        boolean ismul = select.isMultiple();
-        System.out.println(ismul);
+       boolean ismul = select.isMultiple();
+       System.out.println(ismul);
+
 
 
         select.selectByIndex(2);

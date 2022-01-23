@@ -1,0 +1,58 @@
+**************************Selenium Class 11**********************
+****************************2 January 2022********************
+****************************Batch 11*****************
+************************************************************
+
+WebTables
+sceanrios for stale element exception
+1. the element we are working with got refreshed
+2.the element is no longer there
+
+
+ How to handle calnder with pagination
+ 1.clicki on calendar
+ 2.locate the month and year and get the text
+ 3.if the desired month and year is there select the dates//// if not then click on next button till we reach our desried month and year
+ 4.once the month is selected:
+      get the list of all the dates available in the calender
+      treverse through them all and select the desired one, break the loop and set the boolean of while to false;
+
+
+
+
+ ---Working with keys
+ in seleniunm we can replicate the behavious off all the keys that are there on keyboard using
+ the enum Keys.
+ e.g
+ Keys.TAB
+ Keys.BackSpace
+ etc
+
+--taking screenshot
+1.to prove that the test case passed or failed
+
+
+--actionClass
+is given by Selenium to capture the keyboard and mouse events such as:
+1.Move to an element
+2.Drag and Drop
+3.Double click
+4.right click
+
+
+--javaScript Executor
+It is in Selenium and can be executed on the browser
+--javaScriptExecutor allows us to execute javaScript code
+--javaScriptExecutor is an interface
+
+Why and when should we use it?
+Only when selenium is unable to perfrom the operation!
+e.g you are unable to click on a webelement
+
+
+
+------Using java script we can perform:
+click operation
+scroll the page
+refresh the page
+highlight an element

@@ -24,6 +24,7 @@ public class dropDown {
 //        use the select class to select from drop down
         Select select = new Select(days);
 
+
 //select the value from drop down using select by index
    //     select.selectByIndex(1);
 //
@@ -42,8 +43,10 @@ public class dropDown {
 //        select.selectByValue("Wednesday");
 
         List<WebElement> allOptions = select.getOptions();
-        int Size = allOptions.size();
+       int Size = allOptions.size();
         System.out.println(Size);
+
+
 
 //        iterate through list all options and get the text of each option
 

@@ -36,20 +36,38 @@ public class WindowHandle {
 
 //        inorder to print all window handles we need to iterate over the SET
         Iterator<String> it= allWindowHandles.iterator();
+//        iterate through each window handle
+        while(it.hasNext()){
+//            switch to terms page
+            String handle = it.next();
+//            now switch to this particular handle/window
+            driver.switchTo().window(handle);
+//            i need to make sure this is my desired window/tab
+            String title = driver.getTitle();
+//            if condition
+            if(title.equalsIgnoreCase("Google Account Help")) {
+                System.out.println(title);
+                break;
+            }
+        }
 
-        signUpPageHandle=it.next();
-        String helpPageHandle = it.next();
-        String termPageHandle=it.next();
-        String privacyPageHandle=it.next();
 
-        System.out.println("The handle for signup page is :"+ signUpPageHandle);
-        System.out.println("The handle for helpPage page is :"+ helpPageHandle);
-        System.out.println("The handle for termpage is :"+ termPageHandle);
-        System.out.println("The handle for Privacypage is :"+ privacyPageHandle);
+
+//        String signUpPageHandler=it.next();
+//        String helpPageHandle = it.next();
+//        String termPageHandle=it.next();
+//        String privacyPageHandle=it.next();
+//
+//        System.out.println("The handle for signup page is :"+ signUpPageHandler);
+//        System.out.println("The handle for helpPage page is :"+ helpPageHandle);
+//        System.out.println("The handle for termpage is :"+ termPageHandle);
+//        System.out.println("The handle for Privacypage is :"+ privacyPageHandle);
 
 //        swtich to help page page
-        driver.switchTo().window(privacyPageHandle);
-        System.out.println(driver.getTitle());
+
+//        driver.switchTo().window(privacyPageHandle);
+//        System.out.println(driver.getTitle());
+
 
     }
 }
